@@ -217,3 +217,11 @@ ul li a:hover {
     margin: auto;
   }
 }
+
+.nav__content ul {
+  display: none !important;
+}
+
+.portfolio {
+  display: none !important;
+}
