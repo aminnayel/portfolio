@@ -181,6 +181,8 @@ ul li a:hover {
 }
 
 @media (width < 750px) {
+
+  
   nav .checkbox {
     display: block;
   }
@@ -218,6 +220,22 @@ ul li a:hover {
   .action__btns {
     margin: auto;
   }
+  .image img {
+  width: min(25rem, 75%);
+}
+
+.description {
+  line-height: 2em !important;
+}
+
+.ri-menu-line {
+  display: none !important;
+}
+
+.image {
+  margin-top: -25px !important;
+  margin-bottom: -25px !important;
+}
 }
 
 .nav__content ul {
