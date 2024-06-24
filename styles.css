@@ -250,7 +250,7 @@ ul li a:hover {
 
  .image {
    
-    animation: colorCycle 1.5s infinite;
+    animation: colorCycle 4s infinite;
   }
 
   @keyframes colorCycle {
