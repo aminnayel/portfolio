@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amin Nayel | Web Developer & Entrepreneur</title>
+
+  <!-- Remixicon -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+
+  <!-- HERO SECTION -->
+  <section class="section hero" id="hero">
+    <div class="section__container">
+      <div class="content">
+        <p class="subtitle">HELLO, I'M AMIN</p>
+        <h1 class="title">
+          A <span class="typed-text"></span>
+        </h1>
+        <p class="description">
+          I architect and build robust, scalable, and high-performing web solutions that drive business growth. I've had the privilege of helping clients generate millions in revenue through strategic technology implementation.
+        </p>
+        <div class="action__btns">
+          <button onclick="location.href='mailto:amin@aminnayel.me'" class="hire__me">Get In Touch</button>
+          <button onclick="openModal()" class="portfolio">Download CV</button>
+        </div>
+      </div>
+      <div class="image">
+        <img src="assets/amin.jpeg" alt="Amin Nayel">
+      </div>
+    </div>
+  </section>
+
+  <!-- Password Modal -->
+  <div id="passwordModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2>Enter Password to Download CV</h2>
+      <input type="password" id="passwordInput" placeholder="Password">
+      <button onclick="checkPassword()">Download</button>
+      <p id="errorMessage" class="error-message"></p>
+    </div>
+  </div>
+
+  <!-- Typed.js -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script>
+    const typed = new Typed('.typed-text', {
+      strings: ['Web Developer', 'Entrepreneur', 'Tech Consultant', 'Problem Solver'],
+      typeSpeed: 100,
+      backSpeed: 50,
+      loop: true
+    });
+
+    function openModal() {
+      document.getElementById('passwordModal').style.display = 'block';
+    }
+
+    function closeModal() {
+      document.getElementById('passwordModal').style.display = 'none';
+      document.getElementById('passwordInput').value = '';
+      document.getElementById('errorMessage').style.display = 'none';
+    }
+
+    function checkPassword() {
+      const password = document.getElementById('passwordInput').value;
+      const errorMessage = document.getElementById('errorMessage');
+      if (password === 'aminIsAwesome') {
+        window.open('cv.pdf');
+        closeModal();
+      } else {
+        errorMessage.innerText = 'Incorrect password. Please try again.';
+        errorMessage.style.display = 'block';
+      }
+    }
+  </script>
+</body>
+</html>
