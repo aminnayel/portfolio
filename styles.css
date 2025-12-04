@@ -33,7 +33,7 @@ body {
 }
 .content { display: flex; flex-direction: column; justify-content: center; max-width: 600px; }
 .subtitle { letter-spacing: 2px; color: var(--text-light); font-weight: 600; margin-bottom: 0.5rem; }
-.title { font-size: 3.5rem; font-weight: 700; line-height: 4rem; margin-bottom: 1rem; color: var(--text-dark); }
+.title { font-size: 3.3rem; font-weight: 700; line-height: 4rem; margin-bottom: 1rem; color: var(--text-dark); }
 .title span { color: var(--primary-color); }
 .description { line-height: 1.75rem; color: var(--text-light); margin-bottom: 2rem; font-size: 1.1rem; }
 .action__btns { display: flex; gap: 1rem; }
